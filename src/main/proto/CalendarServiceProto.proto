@@ -1,0 +1,43 @@
+syntax = "proto3";
+package com.id.grpc;
+
+message GetEventsRequest{
+    string json = 1;
+}
+
+message GetEventsResponse{
+    string json = 1;
+}
+
+message GetEventRequest{
+    string json = 1;
+}
+
+message GetEventResponse{
+    string json = 1;
+}
+
+message UpdateEventRequest{
+    string json = 1;
+}
+
+message UpdateEventResponse{
+    string json = 1;
+}
+
+message DeleteEventRequest{
+    string json = 1;
+}
+
+message DeleteEventResponse{
+    string json = 1;
+}
+
+
+service CalendarService{
+    rpc GetEvents(GetEventsRequest) returns (GetEventsResponse);
+    rpc GetEvent(GetEventRequest) returns (GetEventResponse);
+    rpc UpdateEvent(UpdateEventRequest) returns (UpdateEventResponse);
+    rpc DeleteEvent(DeleteEventRequest) returns (DeleteEventResponse);
+
+}
